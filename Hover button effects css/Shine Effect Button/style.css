@@ -1,0 +1,54 @@
+/* Basic styling for the page */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background: #000;
+  font-family: Arial, sans-serif;
+}
+
+/* Container for the button */
+.button-container {
+  text-align: center;
+}
+
+/* Shine effect button styles */
+.shine-button {
+  position: relative;
+  display: inline-block;
+  padding: 15px 40px;
+  font-size: 20px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #fff;
+  background: #222;
+  border: 2px solid #fff;
+  overflow: hidden;
+  border-radius: 5px;
+  transition: background 0.3s ease-in-out;
+}
+
+/* Shine overlay */
+.shine-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.4);
+  transform: skewX(-45deg);
+  z-index: 1;
+  transition: left 0.5s ease-in-out;
+}
+
+/* Hover effect */
+.shine-button:hover::before {
+  left: 100%;
+}
+
+.shine-button:hover {
+  background: #444;
+}

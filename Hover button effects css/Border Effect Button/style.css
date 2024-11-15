@@ -1,0 +1,63 @@
+/* Basic styling for the page */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background: #282828;
+  font-family: Arial, sans-serif;
+  color: #fff;
+}
+
+/* Container for the button */
+.button-container {
+  text-align: center;
+}
+
+/* Border Effect button styles */
+.border-effect-button {
+  position: relative;
+  display: inline-block;
+  padding: 15px 40px;
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #fff;
+  background: transparent;
+  border: 2px solid #fff;
+  border-radius: 5px;
+  overflow: hidden;
+  transition: color 0.4s ease-in-out;
+}
+
+/* Border animation pseudo-elements */
+.border-effect-button::before,
+.border-effect-button::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background: #f39c12;
+  transition: 0.4s ease-in-out;
+}
+
+.border-effect-button::before {
+  top: 0;
+  left: 0;
+}
+
+.border-effect-button::after {
+  bottom: 0;
+  right: 0;
+}
+
+.border-effect-button:hover::before,
+.border-effect-button:hover::after {
+  width: 100%;
+}
+
+.border-effect-button:hover {
+  color: #f39c12;
+}

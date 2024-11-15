@@ -1,0 +1,54 @@
+/* Basic styling for the page */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background: #222;
+  font-family: Arial, sans-serif;
+  color: #fff;
+}
+
+/* Container for the button */
+.button-container {
+  text-align: center;
+}
+
+/* Shutter effect button styles */
+.shutter-button {
+  display: inline-block;
+  position: relative;
+  text-decoration: none;
+  color: #fff;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 15px 40px;
+  border: 2px solid #fff;
+  background: transparent;
+  overflow: hidden;
+  transition: color 0.3s ease-in-out;
+}
+
+/* Shutter overlay */
+.shutter-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #f39c12;
+  z-index: -1;
+  transform: translateY(100%);
+  transition: transform 0.4s ease-in-out;
+}
+
+/* Hover effect */
+.shutter-button:hover::before {
+  transform: translateY(0%);
+}
+
+.shutter-button:hover {
+  color: #222;
+}

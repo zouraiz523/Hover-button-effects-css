@@ -1,0 +1,37 @@
+/* Basic styling for the page */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background: #222;
+  font-family: Arial, sans-serif;
+}
+
+/* Container for the button */
+.button-container {
+  text-align: center;
+}
+
+/* Move Left Effect button styles */
+.move-left-button {
+  position: relative;
+  display: inline-block;
+  padding: 15px 40px;
+  font-size: 20px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #fff;
+  background: #3498db;
+  border: none;
+  border-radius: 5px;
+  overflow: hidden;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+/* Hover effect: Move left */
+.move-left-button:hover {
+  transform: translateX(-20px); /* Moves the button left by 20px */
+  background: #1d6fa5; /* Changes background color */
+}
